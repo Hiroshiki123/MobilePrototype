@@ -52,10 +52,25 @@ public class PlayerColorChanger : MonoBehaviour
         currentColor = color;
         switch (color) 
         {
-            case PlayerColor.red: _renderer.material = colors[0];ani.SetFloat("dance", 0); break;
-            case PlayerColor.blue: _renderer.material = colors[1]; ani.SetFloat("dance", 1); break;
-            case PlayerColor.yellow: _renderer.material = colors[2]; ani.SetFloat("dance", 2); break;
-            case PlayerColor.none: _renderer.material = colors[3]; ani.SetFloat("dance", 3); break;
+            case PlayerColor.red: _renderer.material = colors[0]; 
+                ani.SetFloat("dance", 0);
+                _renderer.transform.localEulerAngles = new Vector3(0, 90, 0);
+                break;
+
+            case PlayerColor.blue: _renderer.material = colors[1]; 
+                ani.SetFloat("dance", 1);
+                _renderer.transform.localEulerAngles = new Vector3(0, 90, 0);
+                break;
+
+            case PlayerColor.yellow: _renderer.material = colors[2]; 
+                ani.SetFloat("dance", 2);
+                _renderer.transform.localEulerAngles = new Vector3(0, 90, 0);
+                break;
+
+            case PlayerColor.none: _renderer.material = colors[3]; 
+                ani.SetFloat("dance", 3);
+                _renderer.transform.localEulerAngles = new Vector3(0, 90, 0);
+                break;
         }
 
     }
